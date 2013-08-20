@@ -17,6 +17,7 @@
 	\and
 	Lino Lemmer \footnote{\href{mailto:s6lilemm@uni-bonn.de}{s6lilemm@uni-bonn.de}}
 }
+\publishers{Gruppe 3 -- A -- Brezina}
 
 \begin{document}
 
@@ -176,21 +177,27 @@ B_U_eff >>}\volt.
 
 Aus
 \begin{align}
-	U_1&=U_0\frac{R_1}{R_1+R_i}\notag
+	U_1&=U_0\frac{R_1}{R_1+R_\text i}\notag
 	\intertext{folgt}
-	R_i&=\frac{\del{U_0-U_1}R_1}{U_1}\notag\\
+	R_\text i&=\frac{\del{U_0-U_1}R_1}{U_1}\notag\\
 	&=\frac{U_0-U_1}{I_1}\label{eq:R_i}
 	\intertext{und aus}
-	U_2&=U_0\frac{R_2}{R_2+R_i}\notag
+	U_2&=U_0\frac{R_2}{R_2+R_\text i}\notag
 	\intertext{folgt}
-	U_0&=\frac{\del{R_2+R_i}U_2}{R_2}\notag\\
-	&=\del{R_2+R_i}I_2\label{eq:U_0}
+	U_0&=\frac{\del{R_2+R_\text i}U_2}{R_2}\notag\\
+	&=\del{R_2+R_\text i}I_2\label{eq:U_0}
 	\intertext{Setzt man nun \eqref{eq:U_0} in \eqref{eq:R_i} ein, erhält man}
-	R_i&=\frac{\del{R_2+R_i}I_2}{I_1}-\frac{U_1}{I_1}\notag\\
-	\iff\qquad \del{\frac{I_1-I_2}{I_1}}R_i&=\frac{U_2-U_1}{I_1}\notag\\
-	\iff\qquad R_i&=\frac{U_2-U_1}{I_1-I_2}\notag
+	R_i&=\frac{\del{R_2+R_\text i}I_2}{I_1}-\frac{U_1}{I_1}\notag\\
+	\iff\qquad \del{\frac{I_1-I_2}{I_1}}R_\text i&=\frac{U_2-U_1}{I_1}\notag\\
+	\iff\qquad R_\text i&=\frac{U_2-U_1}{I_1-I_2}\notag
 \end{align}
 Dies ist die gesuchte Gleichung.
+
+Mit den gegebenen Spannungen von $U_1 = \SI{20}\volt$, $U_2 = \SI{10}\volt$ und
+den Lastwiderständen von $R_1 = \infty\,\si\ohm$ und $R_2 = \SI{50}\ohm$ können
+wir die Ströme $I_1 = \SI{0}\ampere$ und $I_2 = \SI{200}{\milli\ampere}$
+errechnen. Daraus ergibt sich dann ein Innenwiderstand des Signalgenerators von
+$R_\text i = \SI{50}\ohm$.
 
 \subsection{Aufgabe E}
 
@@ -223,7 +230,63 @@ dann:
 
 \section{Versuchsaufbau und -durchführung}
 
+\subsection{Bestimmung der Anstiegszeit des Oszillographen}
+
 \subsection{Aufgabe a}
+
+Wie schließen das Oszilloskop mit einem BNC-Kabel an den Frequenzgenerator an,
+dabei setzen wir an beide Anschlüsse ein T-Stück und schließen es mit einem
+\SI{50}{\ohm} Widerstand ab.
+
+Wir wählen verschiedene Signalformen und betrachten das Bild auf dem Oszilloskop. Den Sinus habe ich in Abbildung \ref{fig:0745} skizziert.
+
+\begin{figure}
+	\centering
+	\begin{minipage}{.45\linewidth}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{.45\linewidth}
+	\includegraphics[width=\linewidth]{Fotos/IMG_0745-1500.jpg}
+	\end{minipage}
+	\caption{%
+		Sinus, Frequenz \SI{1}{\kilo\hertz}, Zeitbasis \SI{2}{\milli\second\per\division}, Verstärkung \SI{1}{\volt\per\division}
+	}
+	\label{fig:0745}
+\end{figure}
+
+Das Dreiecksignal sieht analog aus, siehe Abbildung \ref{fig:0746}.
+
+\begin{figure}
+	\centering
+	\begin{minipage}{.45\linewidth}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{.45\linewidth}
+	\includegraphics[width=\linewidth]{Fotos/IMG_0746-1500.jpg}
+	\end{minipage}
+	\caption{%
+		Dreieck, Frequenz \SI{1}{\kilo\hertz}, Zeitbasis \SI{.2}{\milli\second\per\division}, Verstärkung \SI{.1}{\volt\per\division}
+	}
+	\label{fig:0746}
+\end{figure}
+
+\subsection{Aufgabe b}
+
+Aus der Rechteckspannung (Abbildung \ref{fig:0749}) lesen wir die Zeit ab, in der das Signal auf \SI{90}{\percent} steigt und erhalten \SI{<< Delta_t_gemessen >>}{\second}.
+
+\begin{figure}
+	\centering
+	\begin{minipage}{.45\linewidth}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{.45\linewidth}
+	\includegraphics[width=\linewidth]{Fotos/IMG_0749-1500.jpg}
+	\end{minipage}
+	\caption{%
+		Rechteck, Frequenz \SI{20}{\mega\hertz}, Zeitbasis \SI{.5}{\milli\second\per\division}, Verstärkung \SI{.1}{\volt\per\division}
+	}
+	\label{fig:0749}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                 Auswertung                                  %
